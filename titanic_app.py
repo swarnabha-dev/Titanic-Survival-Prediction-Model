@@ -18,7 +18,7 @@ def predict_survival(passenger_data):
 st.set_page_config(page_title="Titanic Survival Prediction", page_icon=":ship:")  # Set title and icon
 
 # App layout with columns
-col1, col2 = st.columns([4, 7])  # Adjust column widths as needed
+col1, col2 = st.columns([3, 6])  # Adjust column widths as needed
 
 # Title and subtitle in col1 (centered)
 with col1:
@@ -38,11 +38,11 @@ with col2:
   fare = st.number_input("Fare", min_value=0.0, value=15.0, step=0.1, key="fare")
   embarked = st.selectbox("Port of Embarkation (Embarked)", ["C", "Q", "S"], key="embarked")
 
-# Predict button in col2
+# Predict button in col2, styled for better visibility
 with col2:
   predict_button = st.button("Predict", key="predict_button")
 
-  # Prediction result, displayed conditionally, to the right
+# Prediction result, displayed conditionally
   if predict_button:
     passenger_data = {
         'Pclass': pclass,
@@ -54,19 +54,19 @@ with col2:
         'Embarked': embarked
     }
     result = predict_survival(passenger_data)
-    st.write(f'<h3 style="color: #2ecc71; float: right;">Prediction: {result}</h3>', unsafe_allow_html=True)
+    st.write(f'<h3 style="color: #2ecc71;">Prediction: {result}</h3>', unsafe_allow_html=True)
 
 # Style customization (optional)
-# st.markdown("""
-# <style>
-# body {
-#   background-color: #f0f2f5;
-# }
-# h1, h3 {
-#   margin-bottom: 0;
-# }
-# </style>
-# """, unsafe_allow_html=True)
+st.markdown("""
+<style>
+body {
+  background-color: #f0f2f5;
+}
+h1, h3 {
+  margin-bottom: 0;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Load custom CSS from styles.css
 with open("static/styles.css") as f:
