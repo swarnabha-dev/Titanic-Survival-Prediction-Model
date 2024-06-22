@@ -23,8 +23,10 @@ col1, col2 = st.columns([5, 10])  # Adjust column widths as needed
 # Title and subtitle in col1 (centered)
 with col1:
   st.markdown("""
-  <h1 style="text-align: center; color: #3498DB;">Titanic Survival Prediction</h1>
-  <p style="text-align: center;">Explore if a passenger would have survived based on historical data.</p>
+  <div>
+      <h1 style="text-align: center; color: #3498DB;">Titanic Survival Prediction</h1>
+      <p style="text-align: center;">Explore if a passenger would have survived based on historical data.</p>
+  </div>            
   """, unsafe_allow_html=True)
 
 # User inputs in col2 with clear labels
