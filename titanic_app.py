@@ -21,11 +21,11 @@ st.set_page_config(page_title="Titanic Survival Prediction", page_icon=":ship:")
 col1, col2 = st.columns([3, 6])  # Adjust column widths as needed
 
 # Title and subtitle in col1 (centered)
-with col1:
-  st.markdown("""
-  <h1 style="text-align: center; color: #3498DB;">Titanic Survival Prediction</h1>
-  <p style="text-align: center;">Explore if a passenger would have survived based on historical data.</p>
-  """, unsafe_allow_html=True)
+# with col1:
+#   st.markdown("""
+#   <h1 style="text-align: center; color: #3498DB;">Titanic Survival Prediction</h1>
+#   <p style="text-align: center;">Explore if a passenger would have survived based on historical data.</p>
+#   """, unsafe_allow_html=True)
 
 # User inputs in col2 with clear labels
 with col2:
@@ -56,17 +56,8 @@ with col2:
     result = predict_survival(passenger_data)
     st.write(f'<h3 style="color: #2ecc71;">Prediction: {result}</h3>', unsafe_allow_html=True)
 
-# Style customization (optional)
-st.markdown("""
-<style>
-body {
-  background-color: #f0f2f5;
-}
-h1, h3 {
-  margin-bottom: 0;
-}
-</style>
-""", unsafe_allow_html=True)
+
+
 
 # Load custom CSS from styles.css
 with open("static/styles.css") as f:
