@@ -57,13 +57,27 @@ with col2:
     st.write(f'<h3 style="color: #2ecc71; float: right;">Prediction: {result}</h3>', unsafe_allow_html=True)
 
 # Style customization (optional)
+# st.markdown("""
+# <style>
+# body {
+#   background-color: #f0f2f5;
+# }
+# h1, h3 {
+#   margin-bottom: 0;
+# }
+# </style>
+# """, unsafe_allow_html=True)
+
+# Load custom CSS from styles.css
+with open("static/styles.css") as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+# Add "Made by" message at the bottom right corner
 st.markdown("""
-<style>
-body {
-  background-color: #f0f2f5;
-}
-h1, h3 {
-  margin-bottom: 0;
-}
-</style>
-""", unsafe_allow_html=True)
+    <div class="footer">
+        Made by Swarnabha
+        <a href="https://github.com/swarnabha-dev/" target="_blank"><img src="https://img.icons8.com/?size=30&id=LoL4bFzqmAa0&format=png&color=000000" style="vertical-align: middle;"></a>
+        <a href="https://www.instagram.com/swarnabha_halder/" target="_blank"><img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" style="vertical-align: middle;"></a>
+        <a href="https://www.linkedin.com/in/swarnabha-halder-627692254/" target="_blank"><img src="https://img.icons8.com/color/30/000000/linkedin.png" style="vertical-align: middle;"></a>
+    </div>
+    """, unsafe_allow_html=True)
