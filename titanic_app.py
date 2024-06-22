@@ -18,7 +18,7 @@ def predict_survival(passenger_data):
 st.set_page_config(page_title="Titanic Survival Prediction", page_icon=":ship:")  # Set title and icon
 
 # App layout with columns
-col1, col2 = st.columns([2, 6])  # Adjust column widths as needed
+col1, col2 = st.columns([4, 7])  # Adjust column widths as needed
 
 # Title and subtitle in col1 (centered)
 with col1:
