@@ -1,5 +1,5 @@
 # Titanic-Survival-Prediction-Model
-This model predicts the passenger would survive or not based the details of passenger
+This model predicts the passenger would survive or not based the details of passenger<br>
 I used the dataset from : https://www.kaggle.com/datasets/yasserh/titanic-dataset
 ### Demo of this
 
